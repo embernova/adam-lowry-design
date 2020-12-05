@@ -1,127 +1,100 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import Swiper from 'swiper';
+import 'swiper/swiper-bundle.css';
 
 import Layout from '../components/Layout'
-import Features from '../components/Features'
-import BlogRoll from '../components/BlogRoll'
+import SwiperComponent from '../components/Swiper'
+import ChangingText from '../components/ChangingText'
+
 
 export const IndexPageTemplate = ({
   image,
   title,
+  preHeading,
   heading,
-  subheading,
-  mainpitch,
+  postHeading,
+  main,
   description,
-  intro,
-}) => (
-  <div>
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
-      }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
-      >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {title}
-        </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {subheading}
-        </h3>
-      </div>
-    </div>
-    <section className="section section--gradient">
+  projects,
+  actionText
+}) => {
+  return (
+    <main>
+      {renderMainSection(preHeading, heading, postHeading, image, actionText)}
+      <SwiperComponent projects={projects.blurbs} heading={projects.heading} />
+      {renderChatSection(main)}
+    </main>
+  );
+}
+
+const renderChatSection = (main) => {
+ return (
+   <div className="position-relative">
+     <div className="container">
+       <section className="main-section main-section__2">
+         <div className="main-section-inner">
+           <h1 className="main-heading">
+             <span className="main-heading-small">{main.preHeading}</span>
+             <span className="main-heading-large">
+               {main.heading}
+               <br/>
+               <ChangingText options={main.headingOptions} />
+             </span>
+           </h1>
+
+           <div className="">
+             <Link to="/contact" className="button-contrast">{main.actionText}</Link>
+           </div>
+         </div>
+
+         <div className="empty"/>
+
+       </section>
+     </div>
+
+   </div>
+
+ );
+}
+
+const renderMainSection = (preHeading, heading, postHeading, image, actionText) => {
+  return (
+    <div className="position-relative">
       <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="content">
-                  <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
-                  </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
-                  </div>
-                </div>
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                </div>
-                <Features gridItems={intro.blurbs} />
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See all products
-                    </Link>
-                  </div>
-                </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
-                  </h3>
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <section className="main-section">
+          <div className="main-section-inner">
+            <h1 className="main-heading">
+              <span className="main-heading-small">{preHeading}</span>
+              <span className="main-heading-large">{heading}</span>
+            </h1>
+            <p className="main-section-paragraph">{postHeading}</p>
           </div>
-        </div>
+
+          <img className="main-section-image" src={!!image.childImageSharp ? image.childImageSharp.fluid.src : image} alt="" />
+
+        </section>
       </div>
-    </section>
-  </div>
-)
+
+      <div className="section-sideways-action">
+        <Link to="/contact" className="button-contrast button-sideways">{actionText}</Link>
+      </div>
+
+    </div>
+  );
+}
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
+  preHeading: PropTypes.string,
   heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
+  postHeading: PropTypes.string,
+  main: PropTypes.object,
   description: PropTypes.string,
-  intro: PropTypes.shape({
+  actionText: PropTypes.string,
+  projects: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
 }
@@ -134,11 +107,13 @@ const IndexPage = ({ data }) => {
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
+        preHeading={frontmatter.preHeading}
         heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
+        postHeading={frontmatter.postHeading}
+        actionText={frontmatter.actionText}
+        main={frontmatter.main}
         description={frontmatter.description}
-        intro={frontmatter.intro}
+        projects={frontmatter.projects}
       />
     </Layout>
   )
@@ -166,26 +141,39 @@ export const pageQuery = graphql`
             }
           }
         }
+        preHeading
         heading
-        subheading
-        mainpitch {
-          title
-          description
-        }
+        postHeading
         description
-        intro {
+        actionText
+        projects {
           blurbs {
             image {
               childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
+                fluid(maxWidth: 805, quality: 90) {
                   ...GatsbyImageSharpFluid
                 }
               }
             }
-            text
+            imageAlt
+            title
+            linkURL
+            backgroundImage {
+                childImageSharp {
+                    fluid(maxWidth: 1920, quality: 100) {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
+            skills
           }
           heading
-          description
+        }
+        main {
+          preHeading
+          heading
+          actionText
+          headingOptions
         }
       }
     }

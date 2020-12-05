@@ -1,0 +1,21 @@
+.button-contrast {
+  --pixels: 14;
+  font-size: var(--font-size);
+  font-weight: 700;
+  background-color: var(--color-contrast);
+  color: var(--color-highlight-contrast);
+  padding: 15px 29px;
+  border: none;
+  transition: color 300ms, background-color 300ms;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button-contrast:hover {
+  background-color: var(--color-highlight-contrast);
+  color: var(--color-contrast);
+}
+
+.button-sideways {
+  transform: rotate(-90deg) translateY(45px);
+}

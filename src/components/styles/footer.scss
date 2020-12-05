@@ -1,0 +1,37 @@
+footer {
+  --pixels: 10;
+  font-size: var(--font-size);
+  line-height: 1.1;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1220px;
+  margin: auto;
+  padding: 12px 4.7vw 38px;
+  color: var(--color-main-light);
+  border-top: 1px solid var(--color-main-light);
+}
+
+footer a {
+  color: var(--color-main-light);
+  display: block;
+  margin-bottom: 3px;
+  text-decoration: none;
+}
+
+footer .lighter {
+  font-weight: 400;
+}
+
+
+@media screen and (max-width: 767px) {
+  footer {
+    display: block;
+    max-width: calc(100vw - 40px);
+  }
+
+  .copyright {
+    margin-top: 21px;
+    display: block;
+  }
+}

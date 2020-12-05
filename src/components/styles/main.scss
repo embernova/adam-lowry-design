@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--color-main-contrast);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-main-dark);
+  --pixels: 16;
+  font-size: var(--font-size);
+}
+
+a {
+  transition: color 300ms;
+}
+
+img {
+  max-width: 100%;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+.highlight-contrast {
+  color: var(--color-highlight-contrast);
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    --pixels: 14;
+  }
+}

@@ -1,0 +1,41 @@
+:root {
+  /*** Colors ***/
+
+  --color-white: #FFFFFF;
+
+  --color-main-light: #A6A8AB;
+  --color-main-dark: #393E46;
+
+  --color-main-contrast: #EEEEEE;
+
+  --color-contrast: #393E46;
+  --color-highlight-contrast: #FFD984;
+
+  /*** End Colors ***/
+
+
+  /*** Font ***/
+
+  /* Default font size, 16px on modern browsers with default settings */
+  --pixels: 16;
+
+  --font-family: 'Roboto', sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /*** End Font ***/
+}
+
+* {
+  /*
+      --font-size
+      Used to calculate font size
+      Usage (setting font size to 24px on modern browsers with default settings):
+          .test {
+              --pixels: 24;
+              font-size: var(--font-size);
+          }
+  */
+  --font-size: calc((var(--pixels) /16)* 1rem);
+}

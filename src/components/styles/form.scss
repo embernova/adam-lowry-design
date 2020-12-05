@@ -1,0 +1,45 @@
+.form {
+  max-width: 800px;
+  margin: auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 300;
+  color: var(--color-main-light);
+}
+
+input,
+textarea {
+  border: none;
+  padding: 5px;
+}
+
+input {
+  width: 100%;
+  height: 40px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 200px;
+}
+
+.form-group {
+  margin-bottom: 45px;
+}
+
+.form-action {
+  margin-top: 50px;
+  margin-bottom: 150px;
+}
+
+.form-action .button-contrast {
+  padding: 10px 29px;
+}
+
+.form h1 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
