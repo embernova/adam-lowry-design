@@ -9,9 +9,20 @@ const Navbar = class extends React.Component {
     this.state = {
       inverted: false
     }
+    this.headerRef = React.createRef();
+    this.menuRef = React.createRef();
+    this.siteMenuCloseRef = React.createRef();
   }
 
   componentDidMount = () => {
+    if (this.props.preview) {
+      const siteHeaderElement = this.headerRef.current;
+      const menuElement = this.menuRef.current;
+      siteHeaderElement.classList.add('header__open');
+      menuElement.removeAttribute('hidden');
+      this.siteMenuCloseRef.current.setAttribute('disabled', true);
+    }
+
     document.addEventListener('keyup', (ev => {
       if (ev.key === 'Escape') {
         animateOut();
@@ -20,7 +31,12 @@ const Navbar = class extends React.Component {
 
     window.addEventListener('scroll', this.handleScroll);
     this.darkElement = document.getElementById('swiper');
-    this.headerHeight = document.getElementById('siteHeader').offsetHeight;
+    const ele = document.getElementById('siteHeader');
+    if (ele) {
+      this.headerHeight = ele.offsetHeight;
+    } else {
+      this.headerHeight = 50
+    }
   }
 
   componentWillUnmount = () => {
@@ -56,7 +72,7 @@ const Navbar = class extends React.Component {
     const emailString = `tel:${this.props.data.email}`;
 
     return (
-      <header id="siteHeader" className={this.state.inverted ? 'header__inverted' : ''}>
+      <header id="siteHeader" ref={this.headerRef} className={this.state.inverted ? 'header__inverted' : ''}>
         <div className="container">
           <div className="header--top header--top__closed" id="siteMenuToggle">
             {this.renderLogo()}
@@ -67,12 +83,12 @@ const Navbar = class extends React.Component {
             </button>
           </div>
 
-          <div className="header--wrapper" id="siteMenu" hidden>
+          <div className="header--wrapper" id="siteMenu" hidden ref={this.menuRef}>
             <div className="header" id="siteMenuInner">
               <div className="header--top">
                 {this.renderLogo()}
 
-                <button type="button" className="header--action header--action__close" id="siteMenuClose" onClick={this.closeMenu}>
+                <button type="button" className="header--action header--action__close" ref={this.siteMenuCloseRef} id="siteMenuClose" onClick={this.closeMenu}>
                   <span className="header--action-text">Close</span>
                 </button>
               </div>

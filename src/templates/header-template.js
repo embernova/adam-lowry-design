@@ -8,7 +8,7 @@ export class HeaderTemplate extends React.Component {
     const { data } = this.props
 
     return (
-      <Navbar data={data} />
+      <Navbar data={data} preview={this.props.preview} />
     )
   }
 }

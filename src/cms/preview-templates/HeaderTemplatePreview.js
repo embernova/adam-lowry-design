@@ -7,9 +7,12 @@ const HeaderTemplatePreview = ({ entry }) => {
 
   if (data) {
     return (
-      <HeaderTemplate
-        data={data}
-      />
+      <div className="preview">
+        <HeaderTemplate
+          data={data}
+          preview={true}
+        />
+      </div>
     )
   } else {
     return <div>Loading...</div>

@@ -10,5 +10,5 @@ CMS.registerMediaLibrary(uploadcare)
 CMS.registerMediaLibrary(cloudinary)
 
 CMS.registerPreviewTemplate('index', IndexPagePreview)
-CMS.registerPreviewTemplate('index', HeaderTemplatePreview)
-CMS.registerPreviewTemplate('index', FooterTemplatePreview)
+CMS.registerPreviewTemplate('header', HeaderTemplatePreview)
+CMS.registerPreviewTemplate('footer', FooterTemplatePreview)
