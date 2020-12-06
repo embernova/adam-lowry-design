@@ -153,7 +153,6 @@ export const pageQuery = graphql`
                 }
               }
             }
-            imageAlt
             title
             linkURL
             backgroundImage {

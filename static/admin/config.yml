@@ -27,7 +27,7 @@ collections:
           - {label: PostHeading, name: postHeading, widget: string}
           - {label: "Call to Action", name: main, widget: object, fields: [{label: preHeading, name: preHeading, widget: string}, {label: heading, name: heading, widget: string}, {label: actionText, name: actionText, widget: string}, {label: headingOptions, name: headingOptions, widget: list}]}
           - {label: "Description (meta only)", name: description, widget: string}
-          - {label: Projects, name: projects, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Image Alt, name: imageAlt, widget: string}, {label: "Background Image", name: backgroundImage, widget: image}, {label: Title, name: title, widget: string}, {label: linkURL, name: linkURL, widget: string}, {label: Skills, name: skills, widget: list}]}]}
+          - {label: Projects, name: projects, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: "Background Image", name: backgroundImage, widget: image}, {label: Title, name: title, widget: string}, {label: linkURL, name: linkURL, widget: string}, {label: Skills, name: skills, widget: list}]}]}
       - file: "src/pages/header.md"
         label: "Header"
         name: "header"

@@ -11,7 +11,6 @@ description: >-
 projects:
   blurbs:
     - image: /img/home/ks-main-2x.png
-      imageAlt: ""
       backgroundImage: /img/home/ks-background-2x.png
       title: Noms App
       linkURL: https://www.maggiesottero.com
@@ -21,7 +20,6 @@ projects:
         - User Interface
         - Motion
     - image: /img/home/maggie-main-2x.png
-      imageAlt: ""
       backgroundImage: /img/home/maggie-background-2x.png
       title: Maggie Sottero
       linkURL: https://www.maggiesottero.com
