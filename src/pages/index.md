@@ -2,19 +2,28 @@
 templateKey: index-page
 title: Adam Lowry Design
 image: /img/home/adam-lowry-2x.png
-preHeading: Adam Lowry
+preHeading: Adam Lowry IV
 heading: UI/UX Designer, aspiring novelist, & NBA fanatic.
 postHeading: Currently helping excited brides-to-be find their dream wedding dress.
 actionText: Get In touch
-description: >-
-  Adam Lowry Design
+main:
+  preHeading: Thanks for visiting
+  heading: |
+    Don’t be shy, Let’s talk about
+  actionText: Get In Touch
+  headingOptions:
+    - Harry Potter
+    - Design
+    - The NBA
+    - Your projects
+description: Adam Lowry Design
 projects:
   blurbs:
     - image: /img/home/ks-main-2x.png
       backgroundImage: /img/home/ks-background-2x.png
       title: Noms App
       linkURL: https://www.maggiesottero.com
-      skills: 
+      skills:
         - Branding Redesign
         - User research
         - User Interface
@@ -23,19 +32,9 @@ projects:
       backgroundImage: /img/home/maggie-background-2x.png
       title: Maggie Sottero
       linkURL: https://www.maggiesottero.com
-      skills: 
+      skills:
         - Web Design
         - User research
         - User Interface
   heading: Selected Work
-main:
-  preHeading: Thanks for visiting
-  heading: > 
-    Don’t be shy, Let’s talk about
-  actionText: Get In Touch
-  headingOptions:
-    - Harry Potter
-    - Design
-    - The NBA
-    - Your projects
 ---
