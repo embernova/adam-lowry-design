@@ -48,3 +48,4 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "footer-template"}
           - {label: email, name: email, widget: string}
           - {label: phone, name: phone, widget: string}
+          - {label: copyright, name: copyright, widget: string}

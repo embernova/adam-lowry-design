@@ -8,7 +8,7 @@ export class HeaderTemplate extends React.Component {
     const { data } = this.props
 
     return (
-      <Navbar data={data.markdownRemark.frontmatter} />
+      <Navbar data={data} />
     )
   }
 }
@@ -23,7 +23,7 @@ HeaderTemplate.propTypes = {
 
 export default () => (
   <StaticQuery
-    render={(data) => <HeaderTemplate data={data} />}
+    render={(data) => <HeaderTemplate data={data.markdownRemark.frontmatter} />}
     query={graphql`
       query HeaderTemplateQuery {
       

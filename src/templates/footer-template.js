@@ -5,10 +5,9 @@ import Footer from '../components/Footer';
 
 export class FooterTemplate extends React.Component {
   render() {
-    const { data } = this.props
-
+    const { data } = this.props;
     return (
-      <Footer data={data.markdownRemark.frontmatter} />
+      <Footer data={data} />
     )
   }
 }
@@ -23,7 +22,7 @@ FooterTemplate.propTypes = {
 
 export default () => (
   <StaticQuery
-    render={(data) => <FooterTemplate data={data} />}
+    render={(data) => <FooterTemplate data={data.markdownRemark.frontmatter} />}
     query={graphql`
       query FooterTemplateQuery {
       
