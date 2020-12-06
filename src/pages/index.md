@@ -1,8 +1,8 @@
 ---
 templateKey: index-page
 title: Adam Lowry Design
-image: /img/home/adam-lowry-2x.png
-preHeading: Adam Lowry IV
+image: /img/adam-lowry-2x.png
+preHeading: Adam Lowry
 heading: UI/UX Designer, aspiring novelist, & NBA fanatic.
 postHeading: Currently helping excited brides-to-be find their dream wedding dress.
 actionText: Get In touch
