@@ -19,8 +19,8 @@ main:
 description: Adam Lowry Design
 projects:
   blurbs:
-    - image: /img/home/ks-main-2x.png
-      backgroundImage: /img/home/ks-background-2x.png
+    - image: /img/ks-main-2x.png
+      backgroundImage: /img/ks-background-2x.png
       title: Noms App
       linkURL: https://www.maggiesottero.com
       skills:
@@ -28,8 +28,8 @@ projects:
         - User research
         - User Interface
         - Motion
-    - image: /img/home/maggie-main-2x.png
-      backgroundImage: /img/home/maggie-background-2x.png
+    - image: /img/maggie-main-2x.png
+      backgroundImage: /img/maggie-background-2x.png
       title: Maggie Sottero
       linkURL: https://www.maggiesottero.com
       skills:
