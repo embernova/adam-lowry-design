@@ -6,19 +6,18 @@ import { animateIn } from '../scripts/header/animate-in';
 const Navbar = class extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       inverted: false
     }
+  }
 
+  componentDidMount = () => {
     document.addEventListener('keyup', (ev => {
       if (ev.key === 'Escape') {
         animateOut();
       }
     }));
-  }
 
-  componentDidMount = () => {
     window.addEventListener('scroll', this.handleScroll);
     this.darkElement = document.getElementById('swiper');
     this.headerHeight = document.getElementById('siteHeader').offsetHeight;
@@ -53,6 +52,9 @@ const Navbar = class extends React.Component {
   }
 
   render() {
+    const phoneString = `tel:${this.props.data.phone}`;
+    const emailString = `tel:${this.props.data.email}`;
+
     return (
       <header id="siteHeader" className={this.state.inverted ? 'header__inverted' : ''}>
         <div className="container">
@@ -78,38 +80,42 @@ const Navbar = class extends React.Component {
               <div className="header--inner">
 
                 <nav className="header--section">
-                  <h2 className="header--outline-title">Projects</h2>
+                  <h2 className="header--outline-title">
+                    {this.props.data.projectsHeading}
+                  </h2>
                   <ul className="header--list">
-                    <li className="header--list-item"><a href="" className="header--list-link">K’s Wigshop</a></li>
-                    <li className="header--list-item"><a href="https://www.maggiesottero.com"
-                                                         className="header--list-link">Maggie Sottero</a></li>
-                    <li className="header--list-item"><a href="" className="header--list-link">Noms Social Cookbook</a>
-                    </li>
+                    {this.renderProjects(this.props.data.projects)}
                   </ul>
 
-                  <h2 className="header--outline-title">Lets talk</h2>
+                  <h2 className="header--outline-title">
+                    {this.props.data.contactHeading}
+                  </h2>
+
                   <ul className="header--list header--list__inline">
-                    <li className="header--list-item"><a href="mailto:hello@adamlowrydesigns.com"
-                                                         className="header--list-link">Email</a></li>
-                    <li className="header--list-item"><a href="tel:18012305579"
-                                                         className="header--list-link">Telephone</a></li>
+                    <li className="header--list-item">
+                      <a href={emailString} className="header--list-link">
+                        Email
+                      </a>
+                    </li>
+
+                    <li className="header--list-item">
+                      <a href={phoneString} className="header--list-link">
+                        Phone
+                      </a>
+                    </li>
                     <li className="header--list-item"><Link to="/" className="header--list-link">Morse Code</Link></li>
                   </ul>
                 </nav>
 
                 <div className="header--section">
-                  <h2 className="header--outline-title header--outline-title__text">About</h2>
+                  <h2 className="header--outline-title header--outline-title__text">{this.props.data.title}</h2>
 
                   <p className="header--paragraph header--paragraph__first">
-                    I’m a UI/UX designer based in Salt Lake City, Utah currently working for bridal designer Maggie
-                    Sottero.
-                    For 8 years I’ve been honing a human-centered design style that places the user at the center of a
-                    unique, hand-crafted experience.
+                    {this.props.data.text}
                   </p>
 
                   <p className="header--paragraph highlight-contrast">
-                    When I’m not designing, I can be found doing the dad thing, snowmobiling in God’s country,
-                    catching up on NBA news, or working on a novel (its really good, my mom said so).
+                    {this.props.data.textHighlight}
                   </p>
                 </div>
               </div>
@@ -134,6 +140,18 @@ const Navbar = class extends React.Component {
         <span className="sr-only">Logo</span>
       </Link>
     )
+  }
+
+  renderProjects(projects) {
+    return projects.blurbs.map((project, index) => {
+      return (
+        <li key={index} className="header--list-item">
+          <a href={project.url} target="_blank" rel="noopener noreferrer" className="header--list-link">
+            {project.text}
+          </a>
+        </li>
+      )
+    });
   }
 }
 

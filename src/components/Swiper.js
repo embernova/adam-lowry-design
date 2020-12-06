@@ -1,5 +1,6 @@
 import React from 'react'
 import Swiper, { Pagination } from 'swiper';
+import 'swiper/swiper-bundle.css';
 
 Swiper.use([Pagination])
 
@@ -59,6 +60,10 @@ const SwiperComponent = class extends React.Component {
     }
 
     this.loaded = true;
+
+    if ( typeof requestAnimationFrame === 'undefined') {
+      return;
+    }
     requestAnimationFrame(() => {
       this.createSwiper();
     });

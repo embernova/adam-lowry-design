@@ -4,19 +4,21 @@ import React from 'react'
 const Footer = class extends React.Component {
   render() {
     const date = new Date().getFullYear();
+    const phoneLink = `tel:${this.props.data.phone}`;
+    const emailLink = `mailto:${this.props.data.email}`;
     return (
       <footer>
         <div>
           <div>
-            <a href="mailto:hello@adamlowrydesigns.com">hello@adamlowrydesigns.com</a>
+            <a href={emailLink}>{this.props.data.email}</a>
           </div>
           <div className="lighter">
-            <a href="tel:18012305579">Ph. 1.801.230.5579</a>
+            <a href={phoneLink}>Ph. {this.props.data.phone}</a>
           </div>
         </div>
 
         <div className="copyright">
-          © <span id="pageCopyright">{date}</span> — Adam Lowry
+          © <span id="pageCopyright">{date}</span> — {this.props.data.copyright}
         </div>
       </footer>
     )

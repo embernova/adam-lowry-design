@@ -34,23 +34,35 @@ const ChangingText = class extends React.Component {
   }
 
   addText = (text) => {
+    if (this.destroyed) {
+      return;
+    }
+
     if (this.state.text !== text) {
       setTimeout(() => {
         const nextChar = text[this.state.text.length];
         this.setState({text: this.state.text + (nextChar || '')});
         this.addText(text);
-      }, this.getTypeDelay(250, 100))
+      }, this.getTypeDelay(150, 25))
+    } else {
+      setTimeout(() => {
+        this.updateText();
+      }, 5000)
     }
   }
 
   removeText = (text) => {
+    if (this.destroyed) {
+      return;
+    }
+
     if (this.state.text) {
       setTimeout(() => {
         const chars = this.textRef.current.innerText.split('');
         chars.pop();
         this.setState({text: chars.join('') || ''});
         this.removeText(text);
-      }, this.getTypeDelay(100, 10))
+      }, this.getTypeDelay(50, 10))
     } else {
       this.addText(text)
     }
@@ -61,11 +73,13 @@ const ChangingText = class extends React.Component {
   }
 
   componentDidMount() {
-    this.interval = setInterval(() => this.updateText(), 8000);
+    setTimeout(() => {
+      this.updateText();
+    }, 8000)
   }
 
   componentWillUnmount() {
-    clearInterval(this.interval);
+    this.destroyed = true;
   }
 }
 

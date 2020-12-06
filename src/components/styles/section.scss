@@ -153,7 +153,8 @@
 }
 
 .cursor {
-  animation: cursor infinite 1000ms;
+  animation: cursor infinite 500ms;
+  animation-direction: alternate;
   position: relative;
   font-weight: 300;
 

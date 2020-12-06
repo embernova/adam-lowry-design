@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
+import HeaderTemplate from '../templates/header-template'
+import FooterTemplate from '../templates/footer-template'
 import './styles/index.scss'
 import useSiteMetadata from './SiteMetadata'
 
@@ -20,9 +20,9 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content="/" />
 
       </Helmet>
-      <Navbar />
+      <HeaderTemplate />
       <div>{children}</div>
-      <Footer />
+      <FooterTemplate />
     </div>
   )
 }

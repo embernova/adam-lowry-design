@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
-import Swiper from 'swiper';
-import 'swiper/swiper-bundle.css';
 
 import Layout from '../components/Layout'
 import SwiperComponent from '../components/Swiper'
