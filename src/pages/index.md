@@ -40,7 +40,7 @@ projects:
     - image: /img/k-s-main.jpg
       backgroundImage: /img/k-s-background-opt.jpg
       title: K's Wigshop
-      linkURL: https://www.behance.net/gallery/109036975/Ks-Wigshop-Website/"target="_blank
+      linkURL: https://www.behance.net/gallery/109036975/Ks-Wigshop-Website
       skills:
         - Brand Redesign
         - User Research
