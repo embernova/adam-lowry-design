@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Adam Lowry Design
-image: /img/adam-lowry-2x.png
+image: /img/adam-lowry-ui-ux-designer.jpg
 preHeading: Adam Lowry
 heading: UI/UX Designer, aspiring novelist, & NBA fanatic.
 postHeading: Currently helping excited brides-to-be find their dream wedding dress.
@@ -18,17 +18,17 @@ main:
 description: Adam Lowry Design
 projects:
   blurbs:
-    - image: /img/ks-main-2x.png
-      backgroundImage: /img/ks-background-2x.png
+    - image: /img/noms-main.jpg
+      backgroundImage: /img/noms-background.jpg
       title: Noms App
-      linkURL: https://www.maggiesottero.com
+      linkURL: https://www.behance.net/gallery/109028601/Noms-Social-Cookbook
       skills:
         - Branding Redesign
         - User research
         - User Interface
         - Motion
-    - image: /img/maggie-main-2x.png
-      backgroundImage: /img/maggie-background-2x.png
+    - image: /img/noms-main.jpg
+      backgroundImage: /img/noms-background.jpg
       title: Maggie Sottero
       linkURL: https://www.maggiesottero.com
       skills:
