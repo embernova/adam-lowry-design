@@ -8,13 +8,15 @@ postHeading: Currently helping excited brides-to-be find their dream wedding dre
 actionText: Get In touch
 main:
   preHeading: Thanks for visiting
-  heading: |
-    Don’t be shy, Let’s talk about
+  heading: Don’t be shy, let’s talk about
   actionText: Get In Touch
   headingOptions:
     - Harry Potter
+    - Web Design
     - The NBA
-    - Ui/UX
+    - UI/UX
+    - The Beatles
+    - Branding
 description: Adam Lowry Design
 projects:
   blurbs:
@@ -23,14 +25,14 @@ projects:
       title: Noms App
       linkURL: https://www.behance.net/gallery/109028601/Noms-Social-Cookbook
       skills:
-        - Branding Redesign
+        - Branding
         - User research
         - User Interface
         - Motion
-    - image: /img/noms-main.jpg
-      backgroundImage: /img/noms-background.jpg
+    - image: /img/maggie-main.png
+      backgroundImage: /img/maggie-background.png
       title: Maggie Sottero
-      linkURL: https://www.maggiesottero.com
+      linkURL: https://www.behance.net/gallery/109035491/Maggie-Sottero-Website
       skills:
         - Web Design
         - User research
