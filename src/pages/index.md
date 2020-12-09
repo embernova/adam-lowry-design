@@ -8,7 +8,7 @@ postHeading: Currently helping excited brides-to-be find their dream wedding dre
 actionText: Get In touch
 main:
   preHeading: Thanks for visiting
-  heading: Don’t be shy, let’s talk about
+  heading: Don’t be shy. Let’s talk about
   actionText: Get In Touch
   headingOptions:
     - Harry Potter
