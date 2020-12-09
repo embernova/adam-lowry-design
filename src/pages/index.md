@@ -13,9 +13,8 @@ main:
   actionText: Get In Touch
   headingOptions:
     - Harry Potter
-    - Design
     - The NBA
-    - Your projects
+    - Ui/UX
 description: Adam Lowry Design
 projects:
   blurbs:
