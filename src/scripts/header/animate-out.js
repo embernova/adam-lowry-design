@@ -15,6 +15,7 @@ export function animateOut() {
   const menuElement = document.getElementById('siteMenu');
   const useBorder = window.matchMedia('(min-width: 992px)').matches;
   const menuElementInner = document.getElementById('siteMenuInner');
+  const backgroundImageElement = document.getElementById('headerBackgroundImage');
 
   const timeline = anime.timeline({
     easing: 'easeOutCirc',
@@ -49,7 +50,7 @@ export function animateOut() {
 
 
   const inner = {
-    targets: menuElementInner,
+    targets: [menuElementInner, backgroundImageElement],
     opacity: [1, 0],
     duration: MAIN_BORDER_DURATION,
   };

@@ -84,6 +84,7 @@ const Navbar = class extends React.Component {
           </div>
 
           <div className="header--wrapper" id="siteMenu" hidden ref={this.menuRef}>
+            <div className="header--background-image" id="headerBackgroundImage" />
             <div className="header" id="siteMenuInner">
               <div className="header--top">
                 {this.renderLogo()}

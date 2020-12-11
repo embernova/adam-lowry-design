@@ -15,6 +15,8 @@ export function animateIn() {
 
   const menuElement = document.getElementById('siteMenu');
   const menuElementInner = document.getElementById('siteMenuInner');
+  const backgroundImageElement = document.getElementById('headerBackgroundImage');
+
   document.body.style.paddingRight = getScrollbarWidth();
   document.body.style.overflow = 'hidden';
 
@@ -54,7 +56,7 @@ export function animateIn() {
   });
 
   const inner = {
-    targets: menuElementInner,
+    targets: [menuElementInner, backgroundImageElement],
     opacity: [0, 1],
     duration: MAIN_BORDER_DURATION,
     delay: MAIN_SLIDE_DURATION + MAIN_BORDER_DELAY
