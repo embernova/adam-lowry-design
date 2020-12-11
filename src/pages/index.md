@@ -1,40 +1,50 @@
 ---
 templateKey: index-page
 title: Adam Lowry Design
-image: /img/adam-lowry-2x.png
+image: /img/adam-lowry-ui-ux-designer.jpg
 preHeading: Adam Lowry
 heading: UI/UX Designer, aspiring novelist, & NBA fanatic.
 postHeading: Currently helping excited brides-to-be find their dream wedding dress.
 actionText: Get In touch
 main:
   preHeading: Thanks for visiting
-  heading: |
-    Don’t be shy, Let’s talk about
+  heading: Don’t be shy! Let’s talk about
   actionText: Get In Touch
   headingOptions:
-    - Harry Potter
-    - Design
-    - The NBA
-    - Your projects
+    - Harry Potter.
+    - Web Design.
+    - The NBA.
+    - UI/UX.
+    - The Beatles.
+    - Branding.
 description: Adam Lowry Design
 projects:
   blurbs:
-    - image: /img/ks-main-2x.png
-      backgroundImage: /img/ks-background-2x.png
+    - image: /img/noms-main.jpg
+      backgroundImage: /img/noms-background.jpg
       title: Noms App
-      linkURL: https://www.maggiesottero.com
+      linkURL: https://www.behance.net/gallery/109028601/Noms-Social-Cookbook
       skills:
-        - Branding Redesign
+        - Branding
         - User research
         - User Interface
         - Motion
-    - image: /img/maggie-main-2x.png
-      backgroundImage: /img/maggie-background-2x.png
+    - image: /img/maggie-main.png
+      backgroundImage: /img/maggie-background-opt
       title: Maggie Sottero
-      linkURL: https://www.maggiesottero.com
+      linkURL: https://www.behance.net/gallery/109035491/Maggie-Sottero-Website
       skills:
         - Web Design
         - User research
         - User Interface
+    - image: /img/k-s-main.jpg
+      backgroundImage: /img/k-s-background-opt.jpg
+      title: K's Wigshop
+      linkURL: https://www.behance.net/gallery/109036975/Ks-Wigshop-Website
+      skills:
+        - Brand Redesign
+        - User Research
+        - User Interface
+        - Motion
   heading: Selected Work
 ---
