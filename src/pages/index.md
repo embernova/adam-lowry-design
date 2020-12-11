@@ -30,7 +30,7 @@ projects:
         - User Interface
         - Motion
     - image: /img/maggie-main.png
-      backgroundImage: /img/maggie-background-opt
+      backgroundImage: /img/maggie-background-opt.png
       title: Maggie Sottero
       linkURL: https://www.behance.net/gallery/109035491/Maggie-Sottero-Website
       skills:
