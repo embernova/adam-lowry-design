@@ -73,6 +73,10 @@ const Navbar = class extends React.Component {
 
     return (
       <header id="siteHeader" ref={this.headerRef} className={this.state.inverted ? 'header__inverted' : ''}>
+        <div className="preload">
+          <img src="/img/mountains.png" alt=""/>
+        </div>
+
         <div className="container">
           <div className="header--top header--top__closed" id="siteMenuToggle">
             {this.renderLogo()}
